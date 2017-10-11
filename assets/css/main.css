@@ -1,4 +1,5 @@
 .chooseChakra {
+  z-index: 100;
   position: relative;
   top: 500px;
   background-color: gray;
@@ -6,6 +7,15 @@
   text-align: center;
   width: 50%;
   margin: 0 auto; }
+
+.firstChakras {
+  margin-bottom: 60px !important;
+  background-color: gray;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+  font-size: 100px; }
 
 html, body {
   min-height: 100%; }
