@@ -8,3 +8,12 @@
 @import 'chooseChakra';
 @import 'rootHeader';
 
+html,body{
+	min-height: 100%;
+}
+body{
+	background-image: url("../img/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
