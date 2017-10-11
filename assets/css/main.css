@@ -9,9 +9,12 @@
   margin: 0 auto; }
 
 .firstChakras {
+  z-index: 99;
+  opacity: 0;
   margin-bottom: 60px !important;
   background-color: gray;
   position: relative;
+  bottom: 125px;
   text-align: center;
   margin: 0 auto;
   width: 50%;
