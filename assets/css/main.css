@@ -1,8 +1,13 @@
+@keyframes rotate {
+  to {
+    transform: rotate(36000deg); } }
 .chooseChakra {
+  box-shadow: 0px 0px 100px #000;
+  border-radius: 45px;
   z-index: 100;
   position: relative;
   top: 500px;
-  background-color: gray;
+  background-color: #8e44ad;
   font-size: 120px;
   text-align: center;
   width: 50%;
@@ -19,6 +24,19 @@
   margin: 0 auto;
   width: 50%;
   font-size: 100px; }
+
+.rootImage {
+  opacity: 0;
+  margin: 0 auto;
+  position: relative;
+  bottom: 1156px;
+  width: 225px;
+  height: 225px; }
+
+.rootImgCont {
+  text-align: center;
+  width: 100%;
+  position: relative; }
 
 html, body {
   min-height: 100%; }
