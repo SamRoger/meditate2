@@ -224,8 +224,7 @@ o.start(0.5);
 o.type = "sine";
 g = ctx.createGain();
 //---------------------------------------------------------------//
-$(".chooseChakra").click(function(){
-	alert('test');
+$(".chooseChakra").on("click", function(){
 	$(".chooseChakra").fadeOut(100, function(){
 		$(".firstRoot").fadeIn(0);
 		$(".firstSacral").fadeIn(200);
