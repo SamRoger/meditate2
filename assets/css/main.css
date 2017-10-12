@@ -39,6 +39,7 @@
   to {
     transform: rotate(36000deg); } }
 .chooseChakra {
+  z-index: 1000;
   box-shadow: 0px 0px 100px #000;
   border-radius: 45px;
   z-index: 100;
