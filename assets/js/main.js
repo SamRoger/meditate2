@@ -218,6 +218,9 @@ function min30Countdown(){
 	},1000)
 }
 //---------------------------------------------------------------//
+if('webkitAudioContext' in window) {
+    var myAudioContext = new webkitAudioContext();
+}
 var AudioContext = window.AudioContext // Default
     || window.webkitAudioContext // Safari and old versions of Chrome
     || false; 
@@ -259,7 +262,7 @@ $(".firstRoot").on("touchstart click", function(){
 	});
 })
 //---------------------------------------------------------------//
-$(".f228").click(function(){
+$(".f228").on("touchstart click", function(){
 	o.frequency.value = 303;
 	o.connect(ctx.destination);
 		$(".f456").fadeOut("slow")
@@ -273,7 +276,7 @@ $(".f228").click(function(){
 			})
 	},700)
 })
-$(".f456").click(function(){
+$(".f456").on("touchstart click", function(){
 	o.frequency.value = 456;
 	o.connect(ctx.destination);
 		$(".f228").fadeOut("slow")
@@ -286,7 +289,7 @@ $(".f456").click(function(){
 			})
 	},700)
 })
-$(".f912").click(function(){
+$(".f912").on("touchstart click", function(){
 	o.frequency.value = 912;
 	o.connect(ctx.destination);
 		$(".f228").fadeOut("slow")
@@ -300,7 +303,7 @@ $(".f912").click(function(){
 	},700)
 })
 //---------------------------------------------------------------//
-$(".min5").click(function(){
+$(".min5").on("touchstart click", function(){
 	$(".min5").fadeOut(100);
 	$(".min15").fadeOut(350);
 	$(".min30").fadeOut(700, function(){
@@ -315,7 +318,7 @@ $(".min5").click(function(){
 	});
 })
 //--------------------------------------------//
-$(".min15").click(function(){
+$(".min15").on("touchstart click", function(){
 	$(".min5").fadeOut(100);
 	$(".min15").fadeOut(350);
 	$(".min30").fadeOut(700, function(){
@@ -330,7 +333,7 @@ $(".min15").click(function(){
 	});
 })
 //--------------------------------------------//
-$(".min30").click(function(){
+$(".min30").on("touchstart click", function(){
 	$(".min5").fadeOut(100);
 	$(".min15").fadeOut(350);
 	$(".min30").fadeOut(700, function(){
@@ -345,7 +348,7 @@ $(".min30").click(function(){
 	});
 })
 //--------------------------------------------//
-$(".firstSacral").click(function(){
+$(".firstSacral").on("touchstart click", function(){
 	$(".sacralImage").css("animation", "rotate 999s");
 		$(".firstChakras").animate({opacity: "0"}, function(){
 			$(".sacralImage").fadeIn("slow")
@@ -355,7 +358,7 @@ $(".firstSacral").click(function(){
 	});
 })
 //--------------------------------------------//
-$(".f303").click(function(){
+$(".f303").on("touchstart click", function(){
 	o.frequency.value = 303;
 	o.connect(ctx.destination);
 		$(".f606").fadeOut("slow")
@@ -369,7 +372,7 @@ $(".f303").click(function(){
 			})
 	},700)
 })
-$(".f606").click(function(){
+$(".f606").on("touchstart click", function(){
 	o.frequency.value = 606;
 	o.connect(ctx.destination);
 		$(".f303").fadeOut("slow")
@@ -382,7 +385,7 @@ $(".f606").click(function(){
 			})
 	},700)
 })
-$(".f1212").click(function(){
+$(".f1212").on("touchstart click", function(){
 	o.frequency.value = 1212;
 	o.connect(ctx.destination);
 		$(".f303").fadeOut("slow")
