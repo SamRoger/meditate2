@@ -218,11 +218,11 @@ function min30Countdown(){
 	},1000)
 }
 //---------------------------------------------------------------//
-var ctx = new AudioContext();
-var o = ctx.createOscillator();
-o.start(0.5);
-o.type = "sine";
-g = ctx.createGain();
+// var ctx = new AudioContext();
+// var o = ctx.createOscillator();
+// o.start(0.5);
+// o.type = "sine";
+// g = ctx.createGain();
 //---------------------------------------------------------------//
 $(".chooseChakra").on("touchstart click", function(){
 	$(".chooseChakra").fadeOut(100, function(){
