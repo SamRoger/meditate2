@@ -218,11 +218,24 @@ function min30Countdown(){
 	},1000)
 }
 //---------------------------------------------------------------//
-// var ctx = new AudioContext();
-// var o = ctx.createOscillator();
-// o.start(0.5);
-// o.type = "sine";
-// g = ctx.createGain();
+var AudioContext = window.AudioContext // Default
+    || window.webkitAudioContext // Safari and old versions of Chrome
+    || false; 
+
+if (AudioContext) {
+    // Do whatever you want using the Web Audio API
+    var ctx = new AudioContext;
+    // ...
+} else {
+    // Web Audio API is not supported
+    // Alert the user
+    alert("Sorry, but the Web Audio API is not supported by your browser. Please, consider upgrading to the latest version or downloading Google Chrome or Mozilla Firefox");
+}
+var ctx = new AudioContext();
+var o = ctx.createOscillator();
+o.start(0.5);
+o.type = "sine";
+g = ctx.createGain();
 //---------------------------------------------------------------//
 $(".chooseChakra").on("touchstart click", function(){
 	$(".chooseChakra").fadeOut(100, function(){
@@ -236,7 +249,7 @@ $(".chooseChakra").on("touchstart click", function(){
 	})
 });
 //---------------------------------------------------------------
-$(".firstRoot").click(function(){
+$(".firstRoot").on("touchstart click", function(){
 	$(".rootImage").css("animation", "rotate 999s");
 		$(".firstChakras").animate({opacity: "0"}, function(){
 			$(".rootImage").fadeIn("slow")
